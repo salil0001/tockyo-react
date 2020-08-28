@@ -82,7 +82,7 @@ export default function OrderSheet () {
                     </div>
                   </div>
                   <div className="available-stocks-wrapper">
-                    Repository
+                    Your Holdings
                     <div className="company-heading">
                       <div>stockSymbol</div>
                       <div>avgCostPrice</div>

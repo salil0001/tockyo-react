@@ -1,0 +1,35 @@
+.players-wrapper {
+  width: 100%;
+
+  table {
+    width: 100%;
+    tr {
+      width: 100%;
+      border-top: 1px solid #888;
+      border-bottom: 1px solid #888;
+      line-height: 2em;
+      .player-name {
+        width: 60%;
+        padding: 0px 0px 0px 12px;
+      }
+
+      .online-available {
+        border-radius: 10px;
+        background: green;
+        font-size: 10px;
+        padding: 0px 0px 0px 12px;
+        margin: 0px 0px 0px 8px;
+      }
+      .offline-available {
+        border-radius: 10px;
+        background: #fff;
+        font-size: 10px;
+        padding: 0px 0px 0px 12px;
+        margin: 0px 0px 0px 8px;
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+

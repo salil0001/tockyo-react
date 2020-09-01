@@ -1,0 +1,49 @@
+.stocks-wrapper{
+    padding: 14px 0px 0px 0px;
+    h5{
+        text-align: center;
+    }
+width: 100%;
+height: 50%;
+    .stock-wrapper{
+        width: 100%;
+        height: 90%;
+        
+        .flickClass{
+            color:#888;;
+        }
+
+        .buy-button{
+            background:green;
+            color: #fff;
+            padding: 8px;
+    border-radius: 8px;
+        }
+        .sell-button{
+            background:red;
+            color:#fff;
+            padding: 8px;
+    border-radius: 8px;
+        }
+        table{
+            width: 100%;
+          
+             tr{
+                width: 100%;
+                line-height:3em;
+                border-top: 1px solid #888;
+                border-bottom: 1px solid #888;
+                box-shadow: -1px 13px 9px -13px #888888;
+
+                .stock-name{
+                    
+                    padding:0px 0px 0px 12px;
+                }
+
+                &:hover{
+                    background:#f5f5f5;
+                }
+            }
+        }
+    }
+}

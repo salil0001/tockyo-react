@@ -1,14 +1,14 @@
 import React from "react";
-import {PRODUCTIONLINKWEBSOCKET,PRODUCTIONLINK} from './staticLinks';
+import { PRODUCTIONLINKWEBSOCKET, PRODUCTIONLINK } from "./staticLinks";
 export const MyContext = React.createContext();
 
 export default class ContextWrapper extends React.Component {
   state = {
     stocks: [],
     users: [],
-    buyStocks: "",
-    sellStocks: "",
-    repository: "",
+    buyStocks: [],
+    sellStocks: [],
+    repository: [],
     name: "",
     email: "",
     password: "",
@@ -16,6 +16,13 @@ export default class ContextWrapper extends React.Component {
     openSignUpModal: false,
     totalCP: 0,
     totalSP: 0,
+    isLoginHidden: false,
+  };
+
+  handleSignIn = () => {
+    this.setState({
+      isLoginHidden: !this.state.isLoginHidden,
+    });
   };
   handleOpenSignUpModal = () => {
     this.setState({
@@ -58,14 +65,14 @@ export default class ContextWrapper extends React.Component {
         sellStocks,
         repository,
         totalCP,
-        totalSP
+        totalSP,
       } = userResult;
 
       sessionStorage.setItem("email", email);
       sessionStorage.setItem("password", password);
       sessionStorage.setItem("name", name);
-      
-        this.setUser(
+
+      this.setUser(
         name,
         password,
         email,
@@ -110,7 +117,7 @@ export default class ContextWrapper extends React.Component {
         sellStocks,
         repository,
         totalCP,
-        totalSP 
+        totalSP,
       });
     } else {
       const email = sessionStorage.getItem("email");
@@ -178,15 +185,24 @@ export default class ContextWrapper extends React.Component {
     });
   };
 
-  gainLossPercent=(SP,CP)=>{
-    const percentCalc=(((SP-CP)/CP)*100).toFixed(2);
-    const profitOrLoss=percentCalc>0?"Profit":"Loss"
-    return{
-      percentCalc,
-      profitOrLoss
+  gainLossPercent = (SP, CP) => {
+    let percentCalc, profitOrLoss, difference;
+    if (SP && CP) {
+      percentCalc = (((SP - CP) / CP) * 100).toFixed(2);
+      profitOrLoss = percentCalc > 0 ? "Profit" : "Loss";
+      difference = (SP - CP).toFixed(2);
+    }else{
+      percentCalc=0
+      profitOrLoss=0
+      difference=0;
     }
 
-  }
+    return {
+      percentCalc,
+      profitOrLoss,
+      difference,
+    };
+  };
   render() {
     return (
       <>
@@ -197,7 +213,8 @@ export default class ContextWrapper extends React.Component {
             handleOpenSignUpModal: this.handleOpenSignUpModal,
             MakeSocketConnection: this.MakeSocketConnection,
             updateWallet: this.updateWallet,
-            gainLossPercent:this.gainLossPercent
+            gainLossPercent: this.gainLossPercent,
+            handleSignIn: this.handleSignIn,
           }}
         >
           {this.props.children}

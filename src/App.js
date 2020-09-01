@@ -1,17 +1,11 @@
 import React from "react";
-import "./App.css";
-import Navbar from "./Components/Navbar";
-import TradingStocks from "./Components/TradingStocks";
+import "./App.scss";
 import ContextWrapper from './Components/Context.context';
-import Users from './Components/Users';
-import OrdersSheet from './Components/OrderSheet'
+import StocksLoginWrapper from './Components/StocksLoginWrapper/StocksDashboard';
 function App() {
   return (
     <ContextWrapper>
-      <Navbar />
-      <TradingStocks />
-      <OrdersSheet />
-      <Users  />
+    <StocksLoginWrapper />
     </ContextWrapper>
   );
 }

@@ -1,18 +1,13 @@
 .nav-wrapper-outer{
   width: 100%;
-  background: #242b52;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=0, Color=#888888)";
-  box-shadow: 0 2px 8px #888888;
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color=#888888);
+  background: #fff;
+  box-shadow: 3px 8px 8px -6px #888888;
   justify-content: space-between;
   height: 45px;
   padding:10px 0px 0px 0px;
   .nav-wrapper{
     width: 97%;
     margin:0 auto;
-    
-    
-    color:white;
     display: flex;
     justify-content: space-between;
    

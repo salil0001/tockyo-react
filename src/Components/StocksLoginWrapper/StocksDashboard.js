@@ -1,4 +1,4 @@
-import React,{useContext,useState} from "react";
+import React,{useContext} from "react";
 import "./StocksLoginDashBoard.scss";
 import Navbar from "../Navbar";
 import StockWrapper from "../StockWrapper/StockWrapper";

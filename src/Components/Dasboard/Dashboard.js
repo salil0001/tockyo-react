@@ -15,7 +15,7 @@ export default function Dashboard() {
     totalSP,
     totalCP,
     email,
-    stocks,
+   
   } = getContext.state;
   const { gainLossPercent } = getContext;
 

@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da78ba9a.chunk.css",
+    "main.js": "/static/js/main.5e385d76.chunk.js",
+    "main.js.map": "/static/js/main.5e385d76.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0823fbb0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0823fbb0.js.map",
+    "static/js/2.a3892557.chunk.js": "/static/js/2.a3892557.chunk.js",
+    "static/js/2.a3892557.chunk.js.map": "/static/js/2.a3892557.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6388b9c436cc957ab2f1d04b78566e71.js": "/precache-manifest.6388b9c436cc957ab2f1d04b78566e71.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.da78ba9a.chunk.css.map": "/static/css/main.da78ba9a.chunk.css.map",
+    "static/js/2.a3892557.chunk.js.LICENSE.txt": "/static/js/2.a3892557.chunk.js.LICENSE.txt",
+    "static/media/Dollar.svg": "/static/media/Dollar.7d50d3d5.svg",
+    "static/media/Logo.svg": "/static/media/Logo.1fdad738.svg",
+    "static/media/Wallet.svg": "/static/media/Wallet.06707ca2.svg",
+    "static/media/up-chevron.svg": "/static/media/up-chevron.6294faf4.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0823fbb0.js",
+    "static/js/2.a3892557.chunk.js",
+    "static/css/main.da78ba9a.chunk.css",
+    "static/js/main.5e385d76.chunk.js"
+  ]
+}

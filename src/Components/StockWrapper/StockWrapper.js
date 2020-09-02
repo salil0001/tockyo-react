@@ -107,7 +107,7 @@ export default function StockWrapper() {
                           {stock.currentPrice}
                         </td>
                         <td>
-                        {percentCalc <0 ? <img src={UpArrow} alt="up arrow" />:<img src={DownArrow}  alt="down arrow"/>}
+                        {percentCalc <0 ? <img src={DownArrow}  alt="down arrow"/>:<img src={UpArrow} alt="up arrow" />}
                         </td>
                         <td  className={percentCalc <0 ? "green-color" : "red-color"}>
                           <b>{percentCalc}%</b>

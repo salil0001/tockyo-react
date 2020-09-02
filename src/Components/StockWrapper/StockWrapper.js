@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./StockWrapper.scss";
 import UpArrow from "./up-chevron.svg";
+import DownArrow from "./down-arrow.svg";
 import ByConfirmationDialog from "../BuySellConfirmationDialog/BuyConfirmationDialog";
 import SellConfirmationDialog from "../BuySellConfirmationDialog/SellConfirmationDialog";
 import { MyContext } from "../Context.context";
@@ -106,7 +107,7 @@ export default function StockWrapper() {
                           {stock.currentPrice}
                         </td>
                         <td>
-                        <img src={UpArrow} alt="up arrow" />
+                        {percentCalc <0 ? <img src={UpArrow} alt="up arrow" />:<img src={DownArrow}  alt="down arrow"/>}
                         </td>
                         <td  className={percentCalc <0 ? "green-color" : "red-color"}>
                           <b>{percentCalc}%</b>

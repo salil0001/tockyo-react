@@ -129,7 +129,7 @@ export default function SellConfirmationDialog(props) {
             </div>
           </div>
           <div className="buy-sell-buttons">
-            <button className="buy-confirm" disabled={disableSellButton} >SELL &#x2705;</button>
+            <button className="buy-confirm" disabled={disableSellButton} >SELL <span role="img" aria-label="buy">&#x2705;</span></button>
             <button onClick={()=>props.handeToggleSellDialog()} className="cancel-confirm">Cancel &#10007;</button>
           </div>
         </form>

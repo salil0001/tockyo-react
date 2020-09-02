@@ -4,7 +4,7 @@ import { MyContext } from "../Context.context";
 export default function OnlineUsers() {
   return (
     <div className="players-wrapper">
-      <h5 style={{ textAlign: "center", margin: "10px 0px 0px 0px" }}>
+      <h5 style={{ textAlign: "center", margin: "10px 0px 10px 0px" }}>
         Players
       </h5>
       <table>

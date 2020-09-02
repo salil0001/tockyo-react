@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "./Logo.svg";
 import "./Navbar.scss";
 import { MyContext } from "../Context.context";
+
 export default function Navbar() {
   return (
     <MyContext.Consumer>
@@ -23,7 +24,7 @@ export default function Navbar() {
                       ""
                     ) : (
                       <div
-                        className="nav-attribute"
+                        className="nav-attribute cursor-pointer"
                         onClick={() => context.handleSignIn()}
                       >
                         Log In
@@ -34,7 +35,7 @@ export default function Navbar() {
                       ""
                     ) : (
                       <div
-                        className="nav-attribute"
+                        className="nav-attribute cursor-pointer"
                         onClick={() => context.handleOpenSignUpModal()}
                       >
                         {" "}
@@ -45,7 +46,7 @@ export default function Navbar() {
                 </div>
                 {wallet ? (
                   <div
-                    className="nav-attribute"
+                    className="nav-attribute cursor-pointer"
                     onClick={() => context.setUser()}
                   >
                     Logout

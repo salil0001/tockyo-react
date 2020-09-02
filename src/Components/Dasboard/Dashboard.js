@@ -15,7 +15,7 @@ export default function Dashboard() {
     totalSP,
     totalCP,
     email,
-   
+    stocks,
   } = getContext.state;
   const { gainLossPercent } = getContext;
 
@@ -25,6 +25,11 @@ export default function Dashboard() {
       setFlickWallet(true);
     }, 2000);
   }, [wallet, setFlickWallet]);
+
+  const getCurrentPrice = (stockSymbol) => {
+    const getStock = stocks.filter((stock) => stock.symbol === stockSymbol);
+    return getStock[0].currentPrice;
+  };
   return (
     <div className="dashboard-wrapper">
       {email ? (
@@ -86,6 +91,11 @@ export default function Dashboard() {
                   </tr>
                 ) : (
                   repository.map((stock) => {
+                    const currentPrice = getCurrentPrice(stock.stockSymbol);
+                    const { percentCalc } = gainLossPercent(
+                      currentPrice,
+                      stock.avgCostPrice
+                    );
                     return (
                       <tr key={stock.id}>
                         <td>{stock.stockSymbol}</td>
@@ -95,8 +105,10 @@ export default function Dashboard() {
                         <td>
                           {(stock.buyQuantity * stock.avgCostPrice).toFixed(2)}
                         </td>
-                        <td>Current</td>
-                        <td>10.22%</td>
+                        <td>
+                          <span className="current-price">{currentPrice}</span>
+                        </td>
+                        <td className={percentCalc>=0?"red-color":"green-color"}>{percentCalc}%</td>
                       </tr>
                     );
                   })

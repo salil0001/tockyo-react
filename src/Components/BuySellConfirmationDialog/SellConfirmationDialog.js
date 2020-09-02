@@ -102,7 +102,7 @@ export default function SellConfirmationDialog(props) {
     <ConfirmationModal>
       <div className="sell-wrapper-parent">
         <div className="confirmation-wrapper">
-          <h5>RIL (Reliance Industries Limited)</h5>
+          <h5>{props.symbol} ({props.name})</h5>
           <div>Qty: {sellQuantity} X Price: {props.currentPrice} = {(sellQuantity*props.currentPrice).toFixed(2) }</div>
         </div>
         <form className="form-wrapper" onSubmit={sellStock}>

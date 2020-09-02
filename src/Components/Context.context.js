@@ -86,6 +86,7 @@ export default class ContextWrapper extends React.Component {
       this.MakeSocketConnection();
     }
 
+
     window.addEventListener("unload", function logData() {
       if (!navigator.sendBeacon) return;
 
@@ -95,6 +96,7 @@ export default class ContextWrapper extends React.Component {
       navigator.sendBeacon(url, obj);
     });
   }
+  
 
   setUser = async (
     name,

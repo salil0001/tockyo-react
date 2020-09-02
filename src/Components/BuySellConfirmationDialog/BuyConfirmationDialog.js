@@ -60,7 +60,7 @@ export default function ByConfirmationDialog(props) {
     <ConfirmationModal>
       <div className="buy-wrapper-parent ">
         <div className="confirmation-wrapper">
-          <h5>RIL (Reliance Industries Limited)</h5>
+          <h5>{props.symbol} ({props.name})</h5>
           <div>Qty: {buyQuantity} X Price: {props.currentPrice} = {(buyQuantity*props.currentPrice).toFixed(2) } </div>
         </div>
         <form className="form-wrapper" onSubmit={buyStock}>

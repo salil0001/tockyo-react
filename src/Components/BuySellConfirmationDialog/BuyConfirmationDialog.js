@@ -96,7 +96,7 @@ export default function ByConfirmationDialog(props) {
             </div>
           </div>
           <div className="buy-quantity-div">
-          Sell Quantity:
+          Buy Quantity:
               <input
                 type="number"
                 required

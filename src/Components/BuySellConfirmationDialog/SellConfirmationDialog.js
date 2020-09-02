@@ -119,7 +119,7 @@ export default function SellConfirmationDialog(props) {
             </div>
           </div>
           <div className="sell-quantity-div">
-            Enter Quantity
+            Sell Quantity
               <input
                 placeholder={availableQuantityBackend}
                 value={sellQuantity}

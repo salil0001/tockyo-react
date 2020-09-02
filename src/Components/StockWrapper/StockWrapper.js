@@ -64,11 +64,10 @@ export default function StockWrapper() {
                     <React.Fragment key={stock.id}>
                       <tr
                         id={stock.id}
-                        onClick={() => {
-                          setOnHoverRow(!onHoverRow);
+                        onMouseOver={() => {
+                          setOnHoverRow(true);
                           setSelectedStockId(stock);
-                        }}
-                        
+                        }} 
                       >
                         <td className="stock-name">{stock.symbol}</td>
                         <td>
@@ -86,7 +85,7 @@ export default function StockWrapper() {
                                 ? {}
                                 : { visibility: "hidden" }
                             }
-                            className="buy-button"
+                            className="buy-button  cursor-pointer"
                             onClick={() => handeToggleBuyDialog()}
                           >
                             BUY
@@ -97,19 +96,19 @@ export default function StockWrapper() {
                                 ? {}
                                 : { visibility: "hidden" }
                             }
-                            className="sell-button"
+                            className="sell-button cursor-pointer"
                             onClick={() => handeToggleSellDialog()}
                           >
                             SELL
                           </span>
                         </td>
                         <td className={flicktheChanges ? "flickClass " : ""}  >
-                          {stock.currentPrice}
+                          {stock.currentPrice} USD
                         </td>
                         <td>
                         {percentCalc <0 ? <img src={DownArrow}  alt="down arrow"/>:<img src={UpArrow} alt="up arrow" />}
                         </td>
-                        <td  className={percentCalc <0 ? "green-color" : "red-color"}>
+                        <td  className={percentCalc >=0 ? "green-color" : "red-color"}>
                           <b>{percentCalc}%</b>
                         </td>
                       </tr>

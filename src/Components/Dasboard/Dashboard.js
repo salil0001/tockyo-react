@@ -25,7 +25,10 @@ export default function Dashboard() {
       setFlickWallet(true);
     }, 2000);
   }, [wallet, setFlickWallet]);
-
+  useEffect(()=>{
+    console.log("totalSP "+totalSP)
+    console.log("totalCP "+totalCP)
+  })
   const getCurrentPrice = (stockSymbol) => {
     const getStock = stocks.filter((stock) => stock.symbol === stockSymbol);
     return getStock[0].currentPrice;
@@ -56,7 +59,7 @@ export default function Dashboard() {
               <div>
                 <div
                   className={
-                    gainLossPercent(totalSP, totalCP).percentCalc > 0
+                    gainLossPercent(totalSP, totalCP).percentCalc >= 0
                       ? "overall-profit green-color"
                       : "overall-profit red-color"
                   }
@@ -108,7 +111,7 @@ export default function Dashboard() {
                         <td>
                           <span className="current-price">{currentPrice}</span>
                         </td>
-                        <td className={percentCalc>=0?"red-color":"green-color"}>{percentCalc}%</td>
+                        <td className={percentCalc>=0?"green-color":"red-color"}>{percentCalc}%</td>
                       </tr>
                     );
                   })

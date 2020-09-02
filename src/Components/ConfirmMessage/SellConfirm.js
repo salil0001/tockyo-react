@@ -31,8 +31,8 @@ export default function SellConfirm(props) {
           </div>
 
           <div className="button-confirm-decline">
-            <button className="confirm-color">Confirm &#x2705;</button>
-            <button className="decline-color">Decline &#10006;</button>
+            <button className="confirm-color">Confirm  <span role="img" aria-label="buy">&#x2705;</span></button>
+            <button className="decline-color">Decline <span role="img" aria-label="buy">&#10006;</span></button>
           </div>
         </div>
       </div>
